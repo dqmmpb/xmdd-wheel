@@ -1,0 +1,51 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+$browser-default-font-size: 32px !default;
+
+
+// Color
+$color-white: #fff;
+$color-beigen: #fff6cd;
+$color-gray-light: #e7e7e7;
+$color-gray: #ddd;
+$color-gray-dark: #6d6d72;
+$color-green: #20ab2a;
+$color-red: #ff0000;
+$color-red-light: #ef3447;
+$color-yellow-dark: #f9cb01;
+$color-orange: #ffa800;
+$color-brown: #b93303;
+$color-orange-dark: #ff5a00;
+$color-brown: #650101;
+$color-black: #000;
+
+// Background Color
+$default-bg-color: $color-red-light;
+$default-overlay-color: rgba(0, 0, 0, 0.5);
+
+// Button Color
+$default-btn-color: $color-brown;
+$default-btn-bg-color: #fde002;
+$default-btn-border-color: #ef6c12;
+$default-btn-box-shadow-color: #9a2533;
+// Button Rule Color
+$default-btn-rule-color: #ec4141;
+
+// Text Color
+$default-score-color: #fde501;
+$default-riddle-color: $color-red-light;
+
+// Modal Color
+$default-modal-bg-color: $color-yellow-dark;
+$default-modal-overlay-color: $default-overlay-color;
+$default-modal-header-bg-color: $color-white;
+$default-modal-header-color: $default-bg-color;
+$default-modal-content-bg-color: $color-white;
+$default-modal-content-color: $default-bg-color;
+$default-modal-footer-bg-color: $color-white;
+$default-modal-footer-color: $default-bg-color;
+
+

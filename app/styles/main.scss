@@ -1,0 +1,514 @@
+/* Your app custom files in this file */
+/* Tab bar icons */
+
+// Variables
+@import "variables.scss";
+
+// Mixins
+@import "mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans','Microsoft YaHei',"Helvetica Neue",Helvetica,sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  font-family: 'Open Sans','Microsoft YaHei',"Helvetica Neue",Helvetica,sans-serif;
+}
+
+body {
+  font-size: 32px;
+}
+
+html {
+  height: 100%;
+  background: $default-bg-color;
+}
+
+body {
+  height: 100%;
+  background: $default-bg-color;
+}
+
+.banner {
+  width: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.btn {
+  display: inline-block;
+  @include pxTorem(padding, 6px, 12px);
+  margin-bottom: 0;
+  @include pxTorem(font-size, 14px);
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.btn-default {
+  color: $default-btn-color;
+  background-color: $default-btn-bg-color;
+  border-color: $default-btn-border-color;
+}
+
+.btn-alpha {
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 2px;
+  -webkit-box-shadow: 0 2px 0 $default-btn-box-shadow-color;
+  -moz-box-shadow: 0 2px 0 $default-btn-box-shadow-color;
+  box-shadow: 0 2px 0 $default-btn-box-shadow-color;
+  @include pxTorem(font-size, 15px);
+}
+
+.btn-beta {
+  background: $color-yellow-dark;
+  border-color: $color-yellow-dark;
+  color: $color-brown;
+
+  &.active {
+    background: $color-red-light;
+    border-color: $color-red-light;
+    color: $color-white;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  height: auto;
+  min-height: 100%;
+  position: relative;
+  @include pxTorem(margin-bottom, -50px);
+  background: $default-bg-color;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  @include pxTorem(padding-bottom, 50px);
+}
+
+.empty {
+  width: 100%;
+  height: auto;
+  @include pxTorem(min-height, 80px);
+}
+
+.img-bg {
+  display: block;
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  background: $default-bg-color;
+  text-align: center;
+  margin: 0 auto;
+  @include pxTorem(padding, 10px, 0);
+
+  img {
+    display: block;
+    margin: 0 auto;
+    @include pxTorem(height, 30px);
+  }
+}
+
+.svg-panel {
+  font-size: 0;
+}
+
+.index-panel {
+  width: 100%;
+  @include pxTorem(height, 263px);
+  .svg {
+    width: 100%;
+    @include pxTorem(height, 263px);
+  }
+}
+
+.btn-rule {
+  position: absolute;;
+  top: 0;
+  right: 0;
+  border-width: 0;
+  background-color: transparent;
+  color: $default-btn-rule-color;
+}
+
+.score-panel {
+  @include pxTorem(padding, 4px, 15px, 0, 15px);
+  @include pxTorem(margin-bottom, 15px);
+  @include pxTorem(font-size, 0px);
+  width: 100%;
+  text-align: center;
+
+  .label {
+    color: $default-score-color;
+    @include pxTorem(font-size, 0px);
+    @include pxTorem(width, 113px);
+    margin: auto;
+
+    .text {
+      display: inline-block;
+      vertical-align: middle;
+      @include pxTorem(width, 70px);
+      @include pxTorem(font-size, 15px);
+      text-align: left;
+    }
+    .score {
+      display: inline-block;
+      vertical-align: middle;
+      @include pxTorem(width, 42px);
+      @include pxTorem(font-size, 15px);
+      text-align: left;
+    }
+
+    a {
+      color: $default-score-color;
+    }
+  }
+  .label.pull-right {
+    float: right;
+  }
+}
+
+.btn-panel {
+  @include pxTorem(padding, 0, 15px);
+  @include pxTorem(margin-bottom, 10px);
+  @include pxTorem(font-size, 0px);
+  text-align: center;
+
+  .btn-default {
+    @include pxTorem(width, 140px);
+    @include pxTorem(margin-left, 10px);
+  }
+
+  .btn-default:first-child {
+    margin-left: 0;
+  }
+
+  .btn-score {
+    background: url(../images/index/btn-score.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    @include pxTorem(width, 103px);
+    @include pxTorem(height, 32px);
+    border: 0;
+  }
+
+  .btn-gifts {
+    background: url(../images/index/btn-gifts.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    @include pxTorem(width, 103px);
+    @include pxTorem(height, 32px);
+    border: 0;
+  }
+
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  display: none;
+
+  .overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: $default-modal-overlay-color;
+  }
+
+  .modal-table {
+    position: relative;
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+
+  .modal-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .modal-panel {
+    position: relative;
+    background: $default-modal-bg-color;
+    @include pxTorem(border-radius, 5px);
+    @include pxTorem(margin, 10px);
+    @include pxTorem(padding, 5px);
+
+    .modal-header {
+      position: relative;
+      @include pxTorem(padding-top, 15px);
+      @include pxTorem(font-size, 16px);
+      @include pxTorem(height, 36px);
+      font-weight: 700;
+      background: $default-modal-header-bg-color;
+      color: $default-modal-header-color;
+      text-align: center;
+    }
+
+    .modal-close {
+      position: absolute;
+      @include pxTorem(top, 5px);
+      @include pxTorem(right, 5px);
+      @include pxTorem(width, 25px);
+      @include pxTorem(height, 25px);
+      background: url(../images/index/close.svg) 0 0 no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .modal-content {
+      @include pxTorem(padding, 10px);
+      background: $default-modal-content-bg-color;
+      color: $default-modal-content-color;
+      .modal-text {
+        text-align: justify;
+
+        .rule-text {
+          .text {
+            @include pxTorem(font-size, 14px);
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+
+    .modal-footer {
+      @include pxTorem(padding, 0, 10px, 15px, 10px);
+      position: relative;
+      @include pxTorem(font-size, 13px);
+      background: $default-modal-footer-bg-color;
+      color: $default-modal-footer-color;
+    }
+
+  }
+}
+
+.modal-alert {
+
+  .modal-table-cell {
+    display: table-cell;
+    vertical-align: top;
+    position: absolute;
+    @include pxTorem(top, 23px);
+  }
+
+  .modal-panel {
+    @include pxTorem(margin, 28px);
+    @include pxTorem(width, 264px);
+    @include pxTorem(height, 164px);
+
+    .modal-header {
+      @include pxTorem(padding-top, 15px);
+      @include pxTorem(font-size, 16px);
+      @include pxTorem(height, 21px);
+    }
+
+    .modal-content {
+      @include pxTorem(padding, 10px, 20px);
+      @include pxTorem(width, 254px);
+      @include pxTorem(height, 133px);
+
+      background: $default-modal-content-bg-color;
+      color: $default-modal-content-color;
+      .modal-text {
+        text-align: center;
+
+        .alert-text {
+          @include pxTorem(height, 78px);
+          display: table;
+          width: 100%;
+          .text {
+            @include pxTorem(padding,  0, 10px, 10px, 10px);
+            @include pxTorem(font-size, 14px);
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+        .btn-panel {
+          @include pxTorem(padding, 0);
+          .btn-default {
+            @include pxTorem(width, 102px);
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+
+.record-panel {
+
+  .top {
+    background: url(../images/index/panel-bg-top.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    @include pxTorem(width, 289px);
+    @include pxTorem(height, 7px);
+    margin: auto;
+  }
+
+  .main {
+    background: url(../images/index/panel-bg-center.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    @include pxTorem(width, 289px);
+    @include pxTorem(min-height, 89px);
+    @include pxTorem(padding, 8px, 15px, 5px, 15px);
+    margin: auto;
+    color: $color-brown;
+
+    ul>li {
+      @include pxTorem(font-size, 15px);
+      @include pxTorem(padding, 0, 0, 5px, 0);
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+      .user {
+        @include pxTorem(font-size, 15px);
+        @include pxTorem(max-width, 110px);
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space:nowrap;
+
+      }
+
+      .gift {
+        @include pxTorem(margin-left, 5px);
+        @include pxTorem(font-size, 15px);
+        @include pxTorem(max-width, 140px);
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space:nowrap;
+
+      }
+    }
+
+  }
+
+  .bottom {
+    background: url(../images/index/panel-bg-bottom.png) 0 0 repeat-y;
+    background-size: 100% 100%;
+    @include pxTorem(width, 289px);
+    @include pxTorem(height, 12px);
+    margin: auto;
+  }
+}
+
+
+
+.prize-panel,.gift-panel {
+
+  @include pxTorem(padding, 33px, 15px, 0, 15px);
+  @include pxTorem(font-size, 15px);
+
+  .main {
+    @include pxTorem(padding, 20px);
+    @include pxTorem(font-size, 15px);
+    @include pxTorem(width, 290px);
+    @include pxTorem(height, 163px);
+
+    background: $color-beigen;
+    @include pxTorem(border-radius, 2px);
+    position: relative;
+
+    .gift-list-panel {
+      display: table;
+      @include pxTorem(width, 182px);
+      @include pxTorem(height, 99px);
+      text-align: center;
+      margin: auto;
+
+      color: $default-bg-color;
+      .gift-list {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 1.8;
+      }
+    }
+
+
+    .badge {
+
+      @include pxTorem(width, 128px);
+      @include pxTorem(height, 27px);
+      position: absolute;
+      @include pxTorem(top, -14px);
+      @include pxTorem(left, 81px);
+      text-align: center;
+      margin: auto;
+    }
+
+    .badge-prize {
+      background: url(../images/index/badge-prize.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .btn-panel {
+      position: absolute;
+      bottom: 0;
+      @include pxTorem(width, 250px);
+
+      .btn-get {
+        @include pxTorem(width, 80px);
+      }
+
+      .btn-give {
+        @include pxTorem(width, 182px);
+      }
+    }
+
+  }
+
+}
+
+.gift-panel {
+  .badge-gift {
+    background: url(../images/index/badge-gift.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.btn-continue-panel {
+  @include pxTorem(padding, 15px, 15px, 0, 15px);
+  .btn-continue {
+    width: 100%;
+  }
+}
