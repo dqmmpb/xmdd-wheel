@@ -95,6 +95,44 @@ body {
   }
 }
 
+.icon {
+  position: relative;
+  @include pxTorem(top, 4px);
+  display: inline-block;
+  @include pxTorem(width,  18px);
+  @include pxTorem(height,  18px);
+}
+
+.icon-gift {
+  background: url(../images/prize/gift.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.icon-avatar {
+  background: url(../images/prize/avatar.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: $color-brown-light;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: $color-brown-light;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: $color-brown-light;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: $color-brown-light;
+}
+
+.input {
+  @include pxTorem(font-size, 15px);
+  @include pxTorem(padding, 6px, 10px);
+  @include pxTorem(border-radius, 4px);
+  border: 1px solid $color-brown-light;
+}
+
+
 .container {
   width: 100%;
   margin: auto;
@@ -146,7 +184,7 @@ body {
 .index-panel {
   width: 100%;
   @include pxTorem(height, 263px);
-  .svg {
+  svg {
     width: 100%;
     @include pxTorem(height, 263px);
   }
@@ -390,7 +428,7 @@ body {
     @include pxTorem(min-height, 89px);
     @include pxTorem(padding, 8px, 15px, 5px, 15px);
     margin: auto;
-    color: $color-brown;
+    color: $color-wine;
 
     ul>li {
       @include pxTorem(font-size, 15px);
@@ -452,7 +490,7 @@ body {
     .gift-list-panel {
       display: table;
       @include pxTorem(width, 182px);
-      @include pxTorem(height, 99px);
+      @include pxTorem(height, 89px);
       text-align: center;
       margin: auto;
 
@@ -477,7 +515,7 @@ body {
     }
 
     .badge-prize {
-      background: url(../images/index/badge-prize.png) 0 0 no-repeat;
+      background: url(../images/prize/badge-prize.png) 0 0 no-repeat;
       background-size: 100% 100%;
     }
 
@@ -485,6 +523,26 @@ body {
       position: absolute;
       bottom: 0;
       @include pxTorem(width, 250px);
+      @include pxTorem(padding, 0px);
+      @include pxTorem(font-size, 0px);
+      @include pxTorem(margin-bottom, 15px);
+
+      .input {
+        display: inline-block;
+        @include pxTorem(width, 160px);
+        vertical-align: middle;
+        @include pxTorem(font-size, 14px);
+        line-height: 1.42857143;
+        text-align: center;
+      }
+
+      .input-error {
+        @include pxTorem(font-size, 10px);
+        position: absolute;
+        @include pxTorem(bottom, -15px);
+        @include pxTorem(left, 40px);
+        color: $default-bg-color;
+      }
 
       .btn-get {
         @include pxTorem(width, 80px);
@@ -501,8 +559,25 @@ body {
 
 .gift-panel {
   .badge-gift {
-    background: url(../images/index/badge-gift.png) 0 0 no-repeat;
+    background: url(../images/prize/badge-gift.png) 0 0 no-repeat;
     background-size: 100% 100%;
+  }
+
+  .gift-list {
+
+    .icon {
+      @include pxTorem(width, 25px);
+      @include pxTorem(height, 25px);
+      display: inline-block;
+      vertical-align: middle;
+      top: 0;
+    }
+
+    .icon + .gift {
+      @include pxTorem(padding-left, 10px);
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }
 

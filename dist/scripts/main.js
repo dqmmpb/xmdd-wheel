@@ -6,25 +6,25 @@ $(function() {
 
 var modalTemplate = '' +
   '<section class="modal modal-alert">' +
-    '<div class="overlay"></div>' +
-    '<div class="modal-table">' +
-      '<div class="modal-table-cell">' +
-        '<div class="modal-panel">' +
-          '<div class="modal-header">' +
-            '<div class="modal-close"></div>' +
-          '</div>' +
-          '<div class="modal-content">' +
-            '<div class="modal-text">' +
-              '<div class="alert-text">' +
-                '<div class="text"></div>' +
-              '</div>' +
-              '<div class="btn-panel">' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-        '</div>' +
-      '</div>' +
-    '</div>' +
+  '<div class="overlay"></div>' +
+  '<div class="modal-table">' +
+  '<div class="modal-table-cell">' +
+  '<div class="modal-panel">' +
+  '<div class="modal-header">' +
+  '<div class="modal-close"></div>' +
+  '</div>' +
+  '<div class="modal-content">' +
+  '<div class="modal-text">' +
+  '<div class="alert-text">' +
+  '<div class="text"></div>' +
+  '</div>' +
+  '<div class="btn-panel">' +
+  '</div>' +
+  '</div>' +
+  '</div>' +
+  '</div>' +
+  '</div>' +
+  '</div>' +
   '</section>';
 
 var dp = {
@@ -79,7 +79,7 @@ var wheelAnimate = function(pos) {
 var click = function(event) {
   event.preventDefault();
   if(!runing) {
-    if(score < 8000) {
+    if(score < 800) {
       // 显示积分不足，赚积分
       var modalAlert = $(modalTemplate).css('display', 'block');
       modalAlert.find('.text')
@@ -97,7 +97,7 @@ var click = function(event) {
       });
 
     } else {
-      score -= 8000;
+      score -= 800;
       $('.score').text(score);
 
       runing = !runing;

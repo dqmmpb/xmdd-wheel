@@ -5,9 +5,9 @@
     "modernizr": "~2.8.1",
     "fastclick": "~1.0.6",
     "lib.flexible": "~0.3.2",
+    "jquery": "~2.2.0",
     "svg.js": "~2.2.5",
     "svg.pathmorphing.js": "*",
-    "jquery": "~2.2.0",
     "svg.easing.js": "~1.0.0"
   },
   "overrides": {

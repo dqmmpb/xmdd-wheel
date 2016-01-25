@@ -6,25 +6,25 @@ $(function() {
 
 var modalTemplate = '' +
   '<section class="modal modal-alert">' +
-    '<div class="overlay"></div>' +
-    '<div class="modal-table">' +
-      '<div class="modal-table-cell">' +
-        '<div class="modal-panel">' +
-          '<div class="modal-header">' +
-            '<div class="modal-close"></div>' +
-          '</div>' +
-          '<div class="modal-content">' +
-            '<div class="modal-text">' +
-              '<div class="alert-text">' +
-                '<div class="text"></div>' +
-              '</div>' +
-              '<div class="btn-panel">' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-        '</div>' +
-      '</div>' +
-    '</div>' +
+  '<div class="overlay"></div>' +
+  '<div class="modal-table">' +
+  '<div class="modal-table-cell">' +
+  '<div class="modal-panel">' +
+  '<div class="modal-header">' +
+  '<div class="modal-close"></div>' +
+  '</div>' +
+  '<div class="modal-content">' +
+  '<div class="modal-text">' +
+  '<div class="alert-text">' +
+  '<div class="text"></div>' +
+  '</div>' +
+  '<div class="btn-panel">' +
+  '</div>' +
+  '</div>' +
+  '</div>' +
+  '</div>' +
+  '</div>' +
+  '</div>' +
   '</section>';
 
 var dp = {
@@ -79,7 +79,7 @@ var wheelAnimate = function(pos) {
 var click = function(event) {
   event.preventDefault();
   if(!runing) {
-    if(score < 8000) {
+    if(score < 800) {
       // 显示积分不足，赚积分
       var modalAlert = $(modalTemplate).css('display', 'block');
       modalAlert.find('.text')
@@ -97,18 +97,18 @@ var click = function(event) {
       });
 
     } else {
-      score -= 8000;
+      score -= 800;
       $('.score').text(score);
 
       runing = !runing;
       overlay.show();
 
       // 模拟ajax请求抽奖
-      setTimeout(function(){
+/*      setTimeout(function(){
         end = 0;
-      }, 3000);
+      }, 1000);*/
 
-      wheel.animate(6000, SVG.easing.circOut).during(wheelAnimate).after(function(){
+      wheel.animate(1000, SVG.easing.circOut).during(wheelAnimate).after(function(){
         runing = !runing;
         overlay.hide();
         var res = Math.floor(Math.random() * 2);
@@ -159,9 +159,6 @@ var click = function(event) {
 
 center.on('click', click);
 
-/*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/
-
-
 $('.btn-rule').click(function(){
   $('.modal-rule').css('display', 'block');
 });
@@ -172,6 +169,8 @@ $('.modal-rule .modal-close').click(function(){
 
 // 初始化积分
 $('.score').text(score);
+
+/*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/
 
 
 

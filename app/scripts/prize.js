@@ -28,6 +28,21 @@ var modalTemplate = '' +
   '</section>';
 
 
+// 领取
+/*var modalAlert = $(modalTemplate).css('display', 'block');
+modalAlert.find('.text')
+  .append('没有奖品可领取！');
+modalAlert.find('.btn-panel')
+  .append('<a href="index.html" class="btn btn-default btn-beta active btn-again">去抽奖</a>');
+modalAlert.appendTo('body');
+modalAlert.find('.modal-close').click(function(){
+  modalAlert.remove();
+});
+modalAlert.find('.btn-again').click(function(){
+  modalAlert.remove();
+});*/
+
+
 $('.btn-get').click(function(){
   // 领取
   var modalAlert = $(modalTemplate).css('display', 'block');
@@ -44,21 +59,5 @@ $('.btn-get').click(function(){
     modalAlert.remove();
   });
 });
-
-if(false) {
-  // 领取
-  var modalAlert = $(modalTemplate).css('display', 'block');
-  modalAlert.find('.text')
-    .append('没有奖品可领取！');
-  modalAlert.find('.btn-panel')
-    .append('<a href="index.html" class="btn btn-default btn-beta active btn-again">去抽奖</a>');
-  modalAlert.appendTo('body');
-  modalAlert.find('.modal-close').click(function(){
-    modalAlert.remove();
-  });
-  modalAlert.find('.btn-again').click(function(){
-    modalAlert.remove();
-  });
-};
 
 console.log('Hello world');
