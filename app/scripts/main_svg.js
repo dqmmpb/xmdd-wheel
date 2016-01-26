@@ -73,7 +73,7 @@ var wheelAnimate = function(pos) {
   var from = dp.wheel.start;
   // 根据后台抽奖结果，渐变修正转盘转动位置，防止盘面抖动
   var to = dp.wheel.deg * dp.wheel.loop + (dp.wheel.deg / dp.wheel.part / 2) * (2 * (dp.wheel.end + (end - dp.wheel.end) * pos) + 1);
-  wheel.rotate(from + (to - from) * pos, dp.wheel.x + dp.wheel.w / 2, dp.wheel.y + dp.wheel.h / 2);/*.move(dp.wheel.x, dp.wheel.y)*/;
+  wheel.rotate(from + (to - from) * pos, dp.wheel.x + dp.wheel.w / 2, dp.wheel.y + dp.wheel.h / 2);/*.move(dp.wheel.x, dp.wheel.y);*/
 };
 
 // 抽奖事件
@@ -172,6 +172,3 @@ $('.modal-rule .modal-close').click(function(){
 $('.score').text(score);
 
 /*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/
-
-
-console.log('Hello world');

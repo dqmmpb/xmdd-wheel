@@ -97,13 +97,13 @@ var click = function(event) {
 
 
       wheel.animate({
-          "transform" : 1
+          '-webkit-transform': 1,
+          'transform': 1
         },
         {
           duration: 5000,
-          step: function(pos, fx){
-            console.log(pos);
-            var to = 0  +  (dp.wheel.deg * dp.wheel.loop - 0)*pos + (dp.wheel.deg / dp.wheel.part / 2) * (2 * (dp.wheel.end + (end - dp.wheel.end) * pos) + 1);
+          step: function(pos){
+            var to = 0 + (dp.wheel.deg * dp.wheel.loop - 0) * pos + (dp.wheel.deg / dp.wheel.part / 2) * (2 * (dp.wheel.end + (end - dp.wheel.end) * pos) + 1);
             wheel.css({
               '-webkit-transform': 'rotate(' + to + 'deg)',
               'transform': 'rotate(' + to + 'deg)'
@@ -187,5 +187,3 @@ $('.score').text(score);
 
 /*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/
 
-
-console.log('Hello world');

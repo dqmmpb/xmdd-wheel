@@ -39,6 +39,7 @@ body {
   img {
     display: block;
     width: 100%;
+    font-size: 0;
   }
 }
 
@@ -122,8 +123,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   @include pxTorem(padding, 6px, 10px);
   @include pxTorem(border-radius, 4px);
   border: 1px solid $color-brown-light;
-}
 
+}
 
 .container {
   width: 100%;
@@ -480,7 +481,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     background: url(../images/index/panel-bg-center.png) 0 0 no-repeat;
     background-size: 100% 100%;
     @include pxTorem(width, 289px);
-    @include pxTorem(min-height, 89px);
+    @include pxTorem(min-height, 98px);
+    @include pxTorem(max-height, 98px);
+    overflow-y: auto;
     @include pxTorem(padding, 8px, 15px, 5px, 15px);
     margin: auto;
     color: $color-wine;
@@ -488,29 +491,38 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     ul>li {
       @include pxTorem(font-size, 15px);
       @include pxTorem(padding, 0, 0, 5px, 0);
+      line-height: 1.2;
 
       &:last-child {
         padding-bottom: 0;
       }
-      .user {
+      /*.user {
         @include pxTorem(font-size, 15px);
         @include pxTorem(max-width, 110px);
         display: inline-block;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space:nowrap;
-
-      }
+      }*/
 
       .gift {
-        @include pxTorem(margin-left, 5px);
         @include pxTorem(font-size, 15px);
         @include pxTorem(max-width, 140px);
         display: inline-block;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space:nowrap;
+      }
 
+      .date {
+        @include pxTorem(font-size, 15px);
+        @include pxTorem(max-width, 110px);
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space:nowrap;
+        text-align: right;
+        float: right;
       }
     }
 
@@ -642,3 +654,59 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     width: 100%;
   }
 }
+
+
+.package-panel {
+
+  @include pxTorem(padding, 0, 30px);
+
+  .input-panel {
+    @include pxTorem(padding, 5px, 15px);
+    @include pxTorem(font-size, 0px);
+    text-align: center;
+    .input {
+      width: 100%;
+      @include pxTorem(font-size, 15px);
+      @include pxTorem(padding, 8px, 10px);
+      text-align: center;
+      color: $color-black-light;
+    }
+  }
+
+  .btn-panel {
+    @include pxTorem(padding, 5px, 15px);
+    .btn-default {
+      width: 100%;
+    }
+  }
+
+  .error-panel {
+    @include pxTorem(padding, 5px, 15px);
+    .input-error {
+      @include pxTorem(font-size, 12px);
+      color: $default-btn-bg-color;
+      text-align: center;
+    }
+  }
+
+  .info-panel {
+    @include pxTorem(padding, 5px, 15px);
+    .info {
+      @include pxTorem(padding, 8px);
+      @include pxTorem(font-size, 15px);
+      color: $default-btn-bg-color;
+      text-align: center;
+    }
+
+    .avatar-img {
+      margin: auto;
+      display:block;
+      font-size: 0;
+      @include pxTorem(width, 45px);
+      @include pxTorem(height, 45px);
+    }
+  }
+
+}
+
+
