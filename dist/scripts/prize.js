@@ -60,4 +60,4 @@ $('.btn-get').click(function(){
   });
 });
 
-console.log('Hello world');
+/*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/

@@ -1,5 +1,7 @@
 'use strict';
 
+// 依赖svg.js svg.easing.js svg.pathmorphing.js插件
+
 $(function() {
   FastClick.attach(document.body);
 });
@@ -172,6 +174,3 @@ $('.modal-rule .modal-close').click(function(){
 $('.score').text(score);
 
 /*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/
-
-
-console.log('Hello world');

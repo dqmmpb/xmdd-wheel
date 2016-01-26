@@ -105,16 +105,19 @@ body {
   background-size: 100% 100%;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
   color: $color-brown-light;
 }
-input:-moz-placeholder, textarea:-moz-placeholder {
+
+input:-moz-placeholder {
   color: $color-brown-light;
 }
-input::-moz-placeholder, textarea::-moz-placeholder {
+
+input::-moz-placeholder {
   color: $color-brown-light;
 }
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+
+input:-ms-input-placeholder {
   color: $color-brown-light;
 }
 
@@ -671,6 +674,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       text-align: center;
       color: $color-black-light;
     }
+
   }
 
   .btn-panel {

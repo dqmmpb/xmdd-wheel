@@ -1,5 +1,7 @@
 'use strict';
 
+// 依赖svg.js svg.easing.js svg.pathmorphing.js插件
+
 $(function() {
   FastClick.attach(document.body);
 });

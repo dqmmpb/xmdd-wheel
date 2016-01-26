@@ -187,5 +187,3 @@ $('.score').text(score);
 
 /*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/
 
-
-console.log('Hello world');
