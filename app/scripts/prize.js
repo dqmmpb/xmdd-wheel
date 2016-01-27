@@ -60,4 +60,12 @@ $('.btn-get').click(function(){
   });
 });
 
+$('.btn-share').click(function(){
+  $('.modal-share').css('display', 'block');
+});
+
+$('.modal-share').click(function(){
+  $('.modal-share').css('display', 'none');
+});
+
 /*document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/

@@ -714,3 +714,25 @@ input:-ms-input-placeholder {
 }
 
 
+.modal-share {
+
+  .modal-table-cell {
+    display: table-cell;
+    vertical-align: top;
+    position: absolute;
+    @include pxTorem(top, 0px);
+    @include pxTorem(right, 0px);
+  }
+
+  .modal-panel {
+    background: transparent;
+
+    .share {
+      background: url(../images/index/share.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+      @include pxTorem(width, 256px);
+      @include pxTorem(height, 160px);
+    }
+
+  }
+}
